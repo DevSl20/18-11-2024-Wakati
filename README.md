@@ -1,1 +1,8 @@
-# 18-11-2024-Wakati
+```
+npm install
+npm run dev
+```
+
+```
+npm run deploy
+```

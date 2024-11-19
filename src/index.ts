@@ -1,9 +1,11 @@
 import { Hono } from 'hono'
 import { logger } from 'hono/logger';
+import { cors } from 'hono/cors';
 
 const app = new Hono()
 
 app.use(logger()); // Enable logger middleware
+app.use(cors()); // Enable CORS middleware
 const wpm = 238;
 
 app.get("/status", (c) => {

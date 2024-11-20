@@ -7,21 +7,21 @@ const app = new Hono()
 //Middlewares
 app.use(logger()); // Enable logger middleware
 app.use(cors()); // Enable CORS middleware
-const wpm = 238;
+const defaultWPM = 238;
 
 function calculateSpeed(text: string, wpm: number) {
   const wordsCount = text.split(/\.s/).length;
   const Seconds = (wordsCount * wpm) / 60;
   const minutes = Seconds / 60;
   return {
-    wordsCount,
+    wpm,
     Seconds: Number(Seconds.toFixed(2)),
     minutes: Number(minutes.toFixed(2)),
-    wordsCount,
+    wordsCount
   };
 }
 
-const x = calculateSpeed("Hello World", wpm);
+const x = calculateSpeed("Hello World", 300);
 console.log(x);
 
 app.get("/status", (c) => {

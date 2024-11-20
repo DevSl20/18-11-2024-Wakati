@@ -4,9 +4,25 @@ import { cors } from 'hono/cors';
 
 const app = new Hono()
 
+//Middlewares
 app.use(logger()); // Enable logger middleware
 app.use(cors()); // Enable CORS middleware
 const wpm = 238;
+
+function calculateSpeed(text: string, wpm: number) {
+  const wordsCount = text.split(/\.s/).length;
+  const Seconds = (wordsCount * wpm) / 60;
+  const minutes = Seconds / 60;
+  return {
+    wordsCount,
+    Seconds: Number(Seconds.toFixed(2)),
+    minutes: Number(minutes.toFixed(2)),
+    wordsCount,
+  };
+}
+
+const x = calculateSpeed("Hello World", wpm);
+console.log(x);
 
 app.get("/status", (c) => {
   return c.json({ status: "API is Active" });

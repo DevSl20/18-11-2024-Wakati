@@ -7,7 +7,7 @@ Wakati is a simple API to calculate the reading speed of text.
 ### Check the status
 
 ```bash
-https://wakati.wofad91300.workers.dev/status
+https://18-11-2024-wakati.devangsalvi21.workers.dev/status
 ```
 
 ### GET
@@ -15,7 +15,7 @@ https://wakati.wofad91300.workers.dev/status
 You need to send the text and the words per minute (wpm optional) as query parameters.
 
 ```
-https://wakati.wofad91300.workers.dev/?text=Hello%20World&wpm=238
+https://18-11-2024-wakati.devangsalvi21.workers.dev/?text=
 ```
 
 ### POST
@@ -23,7 +23,7 @@ https://wakati.wofad91300.workers.dev/?text=Hello%20World&wpm=238
 You need to send the text and the words per minute (wpm optional) as JSON.
 
 ```
-https://wakati.wofad91300.workers.dev/
+https://18-11-2024-wakati.devangsalvi21.workers.dev/
 
 {
   "text": "Hello World",
